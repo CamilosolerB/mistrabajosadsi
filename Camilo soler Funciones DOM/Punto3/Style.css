@@ -1,0 +1,51 @@
+body{
+    background-image: url(Fotos/Wallpaper.jpg);
+    text-align: center;
+    text-decoration: double;
+    margin: 150px;
+    color: aliceblue;
+    line-height: 250%;
+}
+
+.Container{
+    width: 40%;
+    background-color: #34495E;
+    height: 50%;
+    margin: 100px;
+    
+}
+.Container2 .Pitbull{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.Container2 .Buly{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.Container2 .Rottwhiller{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.Container2 .Labrador{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.Container2 .Golden{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.Container2 .Doberman{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.Container2 .Dogo{
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}

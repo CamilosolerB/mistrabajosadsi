@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cssformulariousu.css">
+    <link rel="shortcut icon" href="estilologos/favicon.png" type="image/x-icon">
+    <title>consulta usuarios</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            
+        </nav>
+    </header>
+    <h1>Usuarios</h1>
+    <form action="/frminsertar" method="POST" class="ingreso">
+    <aside>Documento</aside><input type="number" name="documento" value="">
+    <aside>Usuario</aside><input type="text" name="nombre" value="">
+    <aside>Clave</aside><input type="password" name="clave" value="">
+    <aside>Rol</aside><input type="text" name="rol" value="">
+    <aside>Estado</aside><input type="text" name="estado" value="">
+    <aside>Imagen</aside><input type="text"name="imagen" value="">
+    <br>
+    <input type="submit" value="insertar" >
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr class="test">
+                    <th>Documento</th>
+                    <th>Usuario</th>
+                    <th>Clave</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Imagen</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>    
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+
+                    
+                <tr class="resu">
+                    <td><input type="text" value="<%=dat.documento%>" name="Documento" id="" class=""></td>
+                    <td><input type="text" value="<%=dat.nombre%>" name="Nombre" id="" class=""></td>
+                    <td><input type="text" value="<%=dat.clave%>" name="Clave" id="" class=""></td>
+                    <td><input type="text" value="<%=dat.rol%>" name="rol" id="" class=""></td>
+                    <td><input type="text" value="<%=dat.estado%>" name="estado" id="" class=""></td>
+                    <td><input type="text" value="<%=dat.imagen%>" name="imagen" id="" class=""></td>
+                    <td><input type="button" value="actualizar" name="actualizar" id="" class=""></td>
+                    <td><input type="button" value="eliminar" name="eliminar" id="" class=""></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+</form>
+</html>

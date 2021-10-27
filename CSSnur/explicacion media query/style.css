@@ -1,0 +1,36 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+   }
+   table { border-collapse: collapse; border-spacing: 0; }
+   td, th, caption { font-weight: normal; text-align: left; }
+   img, fieldset { border: 0; }
+   ol { padding-left: 1.4em; list-style: decimal; }
+   ul { padding-left: 1.4em; list-style:square; }
+   q:before, q:after { content:''; }
+header{
+    background-color: rgb(252, 52, 2);
+    height: 100px;
+}
+.contenedores{
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+div{
+    background-color: aquamarine;
+    height: 250px;
+    width: 500px;
+    margin: 1px;
+}
+@media (min-width:460px){
+    .header{
+        background-color: brown;
+        height: 100px;
+    }
+}

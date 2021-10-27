@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Musica</title>
+</head>
+<body background="img/fondo.jpg">
+    <div class="login-box">
+        <h1>Login Here</h1>
+
+        <form action="/validate" method="POST" autocomplete="off">
+            <!--Email-->
+            <label for="Username">Email</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Enter Email">
+
+            <!--Password-->
+            <label for="Password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Insert Password">
+
+            <input type="submit" value="Log In">
+
+            <a href="#">Lost Your Password?</a>
+            <a href="#">Don't have an account?</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    background: url(https://fifarma.org/wp-content/uploads/2020/04/salud-mental.jpg);
+}
+header{
+    background-color: #848484;
+    color: #fff;
+    display: flex;    
+}
+
+.menu{
+    list-style:square;
+    padding: 3%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: white 5px solid;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    
+}
+.menu li{
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.menu li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+.menu li a:active{
+    background-color: aquamarine;
+
+}

@@ -1,0 +1,49 @@
+body{
+    font-size: 36px;
+}
+p{
+    border: 10px solid black;
+    padding: 75px;
+    margin: 0px;
+    text-align: center;
+}
+    .rojo{
+        background-color:#ff0;
+        font-size: 3em;
+    }
+    .marron {
+        background-color: #800000;
+    }
+    .verde{
+        background-color: #00ff00;
+        font-size: 1em;
+    }
+    .cian{
+        background-color: #008080;
+        font-size: 2rem;
+        width: 400px;
+        margin: auto;
+    }
+    .azul{
+        background-color: #0000ff;
+    
+    }
+    .negro{
+        background-color: #000;
+        font-size: 3cm;
+        color: #fff;
+    }
+    .blanco{
+        background-color: #fff
+    }
+    .naranja {
+        background-color: #ff8000
+    }
+    .azul:hover{
+        background: #fff;
+        font-size: 15px;
+    }
+    .azul:active{
+        color: blueviolet;
+        background-color: #87a787;
+        }

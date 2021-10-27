@@ -1,0 +1,22 @@
+body{
+    background: url(https://www.ealde.es/wp-content/uploads/2018/02/finanzas-corporativas.jpg);
+}
+.title{
+    text-align: center;
+    color: #fff;
+}
+.container{
+    background: linear-gradient(75deg,#fff,rgb(118, 204, 240));
+    width: 250px;
+    height: 200px;
+    display: block;
+    position: relative;
+    left: 500px;
+    text-align: center;
+}
+.btn{
+background-color: mediumseagreen;
+height: 40px;
+width: 240px;
+position: static;
+}

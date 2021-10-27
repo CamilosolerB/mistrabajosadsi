@@ -1,0 +1,11 @@
+body{
+    background-color: #f7dc6f;
+    color: #212f3c;
+    box-sizing: content-box;
+    overflow: scroll;
+    margin: 24px;
+    text-align: center;
+    text-decoration: double;
+    font-family: fantasy;
+    border-color: #48c9b0;
+}

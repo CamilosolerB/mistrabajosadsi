@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+body{
+  background-color: purple;  
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
+  padding: 0;
+}
+h1{
+    color: #fff;
+    text-align: center;
+}
+
+.grancaja{
+    background: url(https://th.bing.com/th/id/OIP.CRYYDa_6-laG7TNIB4LKfAHaEK?pid=ImgDet&rs=1);
+    display: flex;
+    flex-wrap: wrap;
+    height: 1000px;
+    align-content: center;
+    justify-content: space-evenly;
+    
+}
+.allboxes{
+    background-color: #184e65;
+    width: 30%;
+    height: 150px;
+    margin-bottom: 5px;
+    
+    border: 4px solid #8e0066;
+}
+.titulocaja{
+    background-color: #edb500;
+    width: 80%;
+    height: 40px;
+}
+.logocaja{
+    background-color: #ffff9a;
+    width: 20%;
+    height: 40px;
+}
+.contenedorcaja{
+    background-color: #e31750;
+    width: 100%;
+    height: 100px;
+}
+#box1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#box2{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.Logo{
+    background-color: black;
+    width:30%;
+    height: 45%;
+}
+.Home{
+    background-color: black;
+    width:70%;
+    height: 45%;
+}
+.contenedor{
+    background-color: white;
+    width: 100%;
+    height: 80px;
+}
+.Logo img{
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 30px ;
+    width: 80px;
+
+}
+.Home ul  {
+display: flex;
+font-size: 10px;
+
+ list-style: none;
+
+}
+.Home a{
+    color: white;
+    text-decoration: none;
+}
+.Home li{
+
+   margin-left: 10px;
+}
+.facebook{
+height:20px ;
+width: 20px;
+}
+.instagram{
+    height:20px ;
+    width: 20px;
+}
+
+#caja3{
+    display: flex;
+    flex-wrap: wrap;
+}
+.LogoB{
+    background-color: #100c54;
+    height: 40%;
+    width: 50%;
+}
+.LogoB ul{
+    display: flex;
+font-size: 12px;
+
+}
+
+.LogoB li{
+    margin-left: 20px;
+    display: flex;
+    margin-top: -30px;
+text-decoration: none;
+    
+}
+.LogoB a{
+    color: white;
+    text-decoration: none;
+}
+
+.LogoB IMG{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.derecha{
+
+   background-color: #100c54;
+    height: 40%;
+    width: 50%;
+}
+.derecha ul{
+    display: flex;
+    font-size: 12px;
+    
+     list-style: none;
+}
+.derecha li{
+   margin-top: 10px;
+    margin-left: 7px;
+}
+.derecha a{
+    text-decoration: none;
+    color: white;
+   
+}
+.Boton
+{
+border-radius: 1px;
+background-color: teal;
+width: 40px;
+height: 20px;
+text-align: center;
+}
+.contenido2{
+    background-color: white;
+    width: 100%;
+    height: 90px;
+}
+
+#caja4{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#caja4 header{
+    background: url(https://th.bing.com/th/id/R.31a4c05f971aed535785c6b4e9219ae4?rik=MYS9immBVnEDxQ&pid=ImgRaw&r=0);
+    height: 70%;  
+    width: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.inicio{
+ 
+    float: left;
+    position: relative;
+    width: 45%;
+    height: auto;
+    
+}
+.inicio a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    font-size: 12px;
+}
+.dere{
+
+    float: right;
+    position: relative;
+    width: 45%;
+    height: auto;
+    
+}
+
+.dere a{
+    color:white;
+    font-size: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.dere li{
+
+
+    list-style: none;
+    
+   
+}
+.contenedor3{
+    width: 100%;
+    background-color: white;
+}
+
+.primero{
+    width: 70%;
+    height: 50%;
+    background-color: white;
+}
+.segundo{
+    width: 30%;
+    height: 50%;
+    background-color: white;
+}
+#caja5{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.primero li{
+    display: flex;
+    margin-left: 5px;
+margin-top: 20px;
+    list-style: none;
+  
+}
+.primero ul{
+    
+    display: flex;
+    font-size: 12px;
+    
+    
+}
+.primero img{
+    width: 50px;
+    height:50px ;
+    margin-left: 50px;
+    margin-top: -25px;
+}
+.primero a{
+    color: #000;
+    text-decoration: none;
+}
+.segundo a{
+    color: #000;
+    text-decoration: none;
+}
+.segundo li{
+    display: flex;
+    margin-left: 5px;
+margin-top: 30px;
+    list-style: none;
+}
+.boton
+{
+border-radius: 1px;
+background-color: rgb(190, 146, 231);
+width: 30px;
+height: 15px;
+}
+.navegation li a{
+    font-size: small;
+}
+
+#caja6{
+    display: flex;
+    flex-wrap: wrap;
+}
+.arriba{
+    width: 80%;
+    background-color: #212121;
+        height: 50%;
+}
+.arriba li{
+    display: flex;
+    color: white;
+    font-size: 9px;
+    margin-left: 15px;
+    margin-top: -50px;
+}
+.arriba img{
+    width: 50px;
+    height: 70px;
+    margin-left: 1px;
+
+}
+.lado{
+width: 20%;
+height: 50%;
+    background-color: #212121;
+}
+.abajo{
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    margin-top: -38px;
+     }
+
+     .abajo a{
+
+         color: black;
+         text-decoration: none;
+       
+     }
+.abajo li{
+    display: inline-block;
+
+}
+.abajo li a{
+    padding-top: 0;
+    display: block;
+    padding-right: 2px  ;
+}
+.Barrasuperior{
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    background-color: #f4f4f4;
+
+}
+.container{
+    padding: 0%;
+    margin: 0%;
+    color: #f4f4f4;
+    background-color: #222;
+    align-items: center;
+    display: flex;
+    height: 20%;
+}
+.logo{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.ladoizqu li{
+    text-align: center;
+    display: inline-block;
+}
+
+.ladoizqu li a{
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    color: #f4f4f4;
+    font-size: small;
+}
+
+.ladoizqu li a:hover{
+    background-color: #f4f4f4;
+    color: #222;
+}
+.ladodere li{
+    text-align: center;
+    display: inline-block;
+}
+
+.ladodere li a{
+    text-decoration: none;
+    display: block;
+    color: #f4f4f4;
+}
+
+.ladodere li a:hover{
+    background-color: #f4f4f4;
+    color: #222;
+}
+.Barrainferior{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0%;
+}
+nav ul li {
+    list-style: none;
+}
+.container2{
+    height: 20%;
+    align-items: center;
+    justify-content: space-between;
+}
+.container2 li a{
+    color: #222;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+.container2 li a:hover{
+    color: black;
+    margin-bottom: 2px yellow solid;
+    
+}
+
+.productos{
+    border: 2px solid #222;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+.sucursal{
+    text-decoration: none;
+    color: #222;
+    border: 2px gray solid;
+    width: 500px;
+    height: 150px;
+    padding: 15px;
+}
+.principal li{
+    display: inline-block;
+}
+.principal li a{
+    display: block;
+}
+
+

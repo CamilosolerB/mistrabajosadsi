@@ -1,0 +1,10 @@
+
+#navbar-example3{
+    position: sticky;
+    top: 0;
+    width: 20%;
+}
+.cuerpo{
+    width: 75%;
+    text-align: right;
+}

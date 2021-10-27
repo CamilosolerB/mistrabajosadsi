@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+body{
+    background-color: #f4f4f4;
+    margin: 0%;
+}
+header{
+    margin: 0%;
+    background-color: #F5A9BC;
+    font-family: 'STIX Two Text', serif;
+}
+p{
+    font-family: 'Lora', serif;
+    line-height: 45px;
+}
+.presentacion ul{
+    list-style: none;
+}
+.presentacion li{
+    display: inline-block;
+}
+.presentacion li a{
+    display: block;
+}
+.textoizquierdo{
+    padding-right: 45%;
+}
+.introduccion{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.titulo1{
+    text-align: center;
+}
+.titulo2{
+    padding: 35px;
+    text-align: center;
+}
+.submenu{
+    position: relative;
+    width: 350px;
+    background-color: #BDBDBD;
+    left: 37%;
+    text-align: center;
+}
+.primersubmenu li a{
+    text-decoration: none;
+    display: block;
+    color: black; 
+    padding-top: 30px;
+    height: 50px;
+}
+.primersubmenu ul{
+    list-style: none;
+}
+.primersubmenu li a:hover{
+    background-color: #fff;
+    border: 2px black solid;
+}
+.estructura{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.comportamiento{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.centrado{
+    position: relative;
+    right: 25%;
+}
+.containerest{
+    text-align: center;
+    width: 400px;
+    background-color: #BDBDBD;
+    position: relative;
+    left: 270px;
+}
+.cajarest li a{
+    text-decoration: none;
+    display: block;
+    color: black; 
+    padding-top: 30px;
+    height: 50px;
+}
+.cajarest li a:hover{
+    background-color: #fff;
+    border: 2px black solid;
+}
+.cajarest ul{
+    list-style: none;
+}
+.clases h3{
+    text-align: center;
+}
+.clases{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.despliegue h3{
+    text-align: center;
+}
+.despliegue{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.imagenes{
+    width: 1000px;
+    position: relative;
+    right: 5%;
+}
+.objetos h3{
+    text-align: center;
+}
+.objetos{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.objetos li{
+    font-family: 'Lora', serif;
+    line-height: 30px;
+    position: relative;
+    left: 30px;
+}
+.componentes h3{
+    text-align: center;
+}
+.componentes{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.estructuras h3{
+    text-align: center;
+}
+.estructuras{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.estructuras li{
+    font-family: 'Lora', serif;
+    line-height: 30px;
+    position: relative;
+    left: 30px;
+}
+.paquetes h3{
+    text-align: center;
+}
+.paquetes{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.case h3{
+    text-align: center;
+}
+.case{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.case li{
+    font-family: 'Lora', serif;
+    line-height: 30px;
+    position: relative;
+    left: 30px;
+}
+.actividad h3{
+    text-align: center;
+}
+.actividad{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.maquina h3{
+    text-align: center;
+}
+.maquina{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.secuencia h3{
+    text-align: center;
+}
+.secuencia{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.estcomuni h3{
+    text-align: center;
+}
+.estcomuni{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.estcomuni li{
+    font-family: 'Lora', serif;
+    line-height: 30px;
+    position: relative;
+    left: 30px;
+}
+.tiempos h3{
+    text-align: center;
+}
+.tiempos{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}
+.global h3{
+    text-align: center;
+}
+.global{
+    position: relative;
+    left: 17%;
+    width: 900px;
+    padding-top: 35px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Registro</h1>
+        <form action="/crear" method="POST">
+            <label for="username">Documento</label>
+            <input type="number" placeholder="Documento" id="usu_id" name="usu_id">
+            <label for="username">Nombre</label>
+            <input type="text" placeholder="Nombre" id="usu_nombre" name="usu_nombre">
+            <label for="username">Apellido</label>
+            <input type="text" placeholder="Apellido" id="usu_apellido" name="usu_apellido">
+            <label for="username">Correo</label>
+            <input type="email" placeholder="Correo" id="usu_correo" name="usu_correo">
+            <label for="password">Contraseña</label>
+            <input type="password" placeholder="Contraseña" id="usu_clave" name="usu_clave">
+            <label for="password">Fecha de nacimiento</label>
+            <input type="date" placeholder="Contraseña" id="usu_fechanacimiento" name="usu_fechanacimiento">
+            <input type="submit" value="Iniciar"><br>
+            <a href="login">Ya tengo cuenta</a>
+        </form>
+    </div>
+</body>
+</html>

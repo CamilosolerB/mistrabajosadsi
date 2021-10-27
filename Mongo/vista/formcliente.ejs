@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cssformulariousu.css">
+    <link rel="shortcut icon" href="estilologos/favicon.png" type="image/x-icon">
+    <title>consulta clientes</title>
+</head>
+<body>
+    <header>
+        <nav>
+            
+        </nav>
+    </header>
+    <h1>clientes</h1>
+    <form action="/frminsertar" method="POST" class="ingreso">
+    <aside>Documento</aside><input type="number" name="Documento" value="">
+    <aside>Nombre</aside><input type="text" name="Nombre" value="">
+    <aside>Apellido</aside><input type="text" name="Apellido" value="">
+    <aside>correo</aside><input type="email" name="correo" value="">
+    <aside>celular</aside><input type="number" name="celular" value="">
+    <aside>sexo</aside><input type="text"name="sexo" value="">
+    <aside>Fecha de nacimiento</aside><input type="date" name="fecha" value="">
+    <br>
+    <input type="submit" value="insertar" >
+    </form>
+    
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr class="test">
+                    <th>Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>correo</th>
+                    <th>celular</th>
+                    <th>sexo</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Actualizar</th>
+                    <th>Eliminar</th>    
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.Documento%>" name="documento" id="" class=""></td>
+                    <td><input type="text" value="<%=datos.Nombre%>" name="nombre" id="" class=""></td>
+                    <td><input type="text" value="<%=datos.Apellido%>" name="apellido" id="" class=""></td>
+                    <td><input type="text" value="<%=datos.correo%>" name="correo" id="" class=""></td>
+                    <td><input type="text" value="<%=datos.celular%>" name="celular" id="" class=""></td>
+                    <td><input type="text" value="<%=datos.sexo%>" name="sexo" id="" class=""></td>
+                    <td><input type="text" value="<%=datos.fecha%>" name="fecha" id="" class=""></td>
+                    <td><input type="button" value="actualizar" name="actualizar" id="" class=""></td>
+                    <td><input type="button" value="eliminar" name="eliminar" id="" class=""></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>

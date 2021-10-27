@@ -1,0 +1,59 @@
+body{
+    background-color: #f4f4f4;
+    margin: 0%;
+}
+header{
+    background-color: #004481;
+    width: 100%;
+    height: 88px;
+    margin: 0%;
+}
+.logo{
+    float: left;
+}
+.box{
+    margin: 0%;
+}
+
+.simple ul {
+    margin: 0%;
+    padding: 2%;
+    list-style: none;
+}
+.final ul{
+    margin: 0%;
+    list-style: none;
+}
+.simple li a{
+    text-decoration: none;
+    color: #f4f4f4;
+    display: block;
+    padding: 20px;
+    float: left;
+}
+.final li a{
+    text-decoration: none;
+    color: #f4f4f4;
+    display: block;
+    padding: 20px;
+    float: right;
+}
+.simple{
+    width: 562.5px;
+    
+}
+.final{
+    width: 562.5px;
+    height: 42px;
+    float: right;
+
+}
+.acceso{
+    background-color: #028484;
+}
+.registro{
+    color: yellow;
+}
+.fas fa-user-edit{
+    color: yellow;
+}

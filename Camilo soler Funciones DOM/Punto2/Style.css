@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    background-image: url(Foto/Wallpaper.jpg);
+    line-height: 300%;
+
+}
+.Container{
+    line-height: 150%;
+}

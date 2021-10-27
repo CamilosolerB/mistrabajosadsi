@@ -1,0 +1,44 @@
+body{
+    background-color: #B3B6B7;
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    font-size: 25px
+
+
+}
+header{
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: larger;
+}
+
+.Container{
+    float: left;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+}
+
+footer{
+
+text-align: center;
+
+    
+
+}
+
+.container2{
+
+    background-color: #D2D4DE;
+display: flexbox;
+flex: auto;
+}
+
+.print{
+    text-align:center;
+    
+}
+.Result{
+    text-align: center;
+}

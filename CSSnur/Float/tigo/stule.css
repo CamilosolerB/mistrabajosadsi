@@ -1,0 +1,45 @@
+body{
+    background-color: #f4f4f4;
+    margin: 0%;
+}
+header{
+    margin: 0%;
+    height: 120px;
+}
+.barraarriba{
+    background-color: #001940;
+    height: 37px;
+}
+.navegar ul{
+    list-style: none;
+}
+.navegar li a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    float: left;
+    display: block;
+    margin-left: 100px;
+}
+.barraabajo{
+    padding-left: 25%;
+    background-color: #00377b;
+    height: 80px;
+    margin-top: 0%;
+    align-items: center;
+
+}
+.navajo ul{
+    list-style: none;
+}
+.logo{
+    float: left;
+    padding: 15px 20px;
+}
+.navajo li a{
+    display: block;
+    float: left;
+    padding: 25px 20px 25px;
+    color: #fff;
+    text-decoration: none;
+}

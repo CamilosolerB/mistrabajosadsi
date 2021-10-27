@@ -1,0 +1,47 @@
+body{
+    background-color: #f4f4f4;
+    margin: 0%;
+}
+header{
+    color: #f4f4f4;
+    width: 100%;
+    clear: both;
+}
+.logo{
+    float: left;
+}
+.box{
+    margin: 0%;
+    align-items: center;
+}
+.simple{
+    float: left;
+}
+.final{
+    float: right;
+}
+.simple ul {
+    margin: 0%;
+    padding: 2%;
+    list-style: none;
+}
+.final ul{
+    margin: 0%;
+    padding: 2%;
+    list-style: none;
+    float: right;
+    clear: both;
+}
+.simple ul li a{
+    text-decoration: none;
+    color: #f4f4f4;
+    float: left;
+    display: block;
+    padding: 1rem;
+}
+.final ul li a{
+    text-decoration: none;
+    color: #f4f4f4;
+    display: block;
+    padding: 1rem;
+}

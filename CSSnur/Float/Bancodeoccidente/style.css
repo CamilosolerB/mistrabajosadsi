@@ -1,0 +1,75 @@
+body{
+    background-color: #f4f4f4;
+    margin: 0%;
+}
+header{
+    margin: 0;
+}
+.barrainferior{
+    background: linear-gradient(75deg,#066DAC,#00264A);
+    height: 100px;
+    clear: both;
+}
+.IG{
+    text-align: center;
+    align-items: center;
+}
+.IG ul{
+    list-style: none;
+}
+.IG li a{
+    float: left;
+    display: block;
+    color: #848484;
+    text-decoration: none;
+    padding-right: 20px;
+}
+.logo{
+    float: left;
+}
+.principal{
+    text-align: center;
+}
+.principal ul{
+    list-style: none;
+    align-items: center;
+}
+.principal li a{
+    align-items: center;
+    text-align: center;
+    float: left;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-top: 35px;
+}
+.final{
+    text-align: center;
+}
+.final ul{
+    list-style: none;
+    text-align: center;
+}
+.final li a{
+    float: right;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-top: 35px;
+    text-align: center;
+}
+.simula{
+    background-color: #066DAC;
+}
+.derecha{
+    float: right;
+    margin-right: 35px;
+    text-align: center;
+}
+.busqueda{
+    padding: 0 13px;
+    height: 35px;
+    width: 300px;
+}
