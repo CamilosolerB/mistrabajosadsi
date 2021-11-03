@@ -39,4 +39,24 @@ public class UsuarioDAO {
         }
         return dat;
     }
+    
+    public boolean insertarcliente(ClienteDTO cto){
+        
+        boolean req=false;
+        
+        try {
+            ps=cnn.prepareStatement("INSERT INTO clientes VALUES(?,?,?,?,?)");
+            ps.setLong(1, cto.getCedula());
+            ps.setString(2, cto.getDireccion());
+            ps.setString(3, cto.getEmail());
+            ps.setString(4, cto.getNombre());
+            ps.setString(5, cto.getTelefono());
+            if(ps.executeUpdate()>0){
+                req=true;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion : "+ex);
+        }
+     return req;
+    }
 }

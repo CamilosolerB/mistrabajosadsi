@@ -14,7 +14,7 @@ import javax.swing.JTextField;
  * @author caans
  */
 public class insertusu extends javax.swing.JFrame {
-    
+    viscli vis = new viscli();
     Usuarios usuario = new Usuarios(this);
 
     public JTextField getCedula() {
@@ -57,6 +57,7 @@ public class insertusu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jRadioButton1 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -72,6 +73,13 @@ public class insertusu extends javax.swing.JFrame {
         password = new javax.swing.JTextField();
         usu = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        redcli = new javax.swing.JButton();
+        redusu = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        Ventas = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+
+        jRadioButton1.setText("jRadioButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -79,9 +87,10 @@ public class insertusu extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(77, 0, 145));
         jLabel2.setText("Bienvenido señor usuario");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 260, 60));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 190, 40));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
 
         jLabel3.setText("Cedula");
 
@@ -135,7 +144,7 @@ public class insertusu extends javax.swing.JFrame {
                             .addComponent(nombre))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 56, Short.MAX_VALUE)
+                .addGap(0, 50, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(43, 43, 43))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -170,14 +179,39 @@ public class insertusu extends javax.swing.JFrame {
                     .addComponent(usu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 290, 320));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 290, 320));
 
         jLabel1.setBackground(new java.awt.Color(200, 222, 208));
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\caans\\OneDrive\\Escritorio\\Adsi\\Java\\modulos\\mitienda\\img\\basket-fruit-4k-full-hd-wallpaper-preview.jpg")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 450));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 740, 460));
+
+        redcli.setText("Clientes");
+        redcli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                redcliActionPerformed(evt);
+            }
+        });
+        getContentPane().add(redcli, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 70, 40));
+
+        redusu.setText("Usuarios");
+        redusu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                redusuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(redusu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 40));
+
+        jButton2.setText("Proveedores");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, 40));
+
+        Ventas.setText("Ventas");
+        getContentPane().add(Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 70, 40));
+
+        jButton3.setText("Productos");
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 80, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -189,6 +223,16 @@ public class insertusu extends javax.swing.JFrame {
     private void cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cedulaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cedulaActionPerformed
+
+    private void redcliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redcliActionPerformed
+        vis.setTitle("Insertar cliente");
+        vis.setVisible(true);
+        
+    }//GEN-LAST:event_redcliActionPerformed
+
+    private void redusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redusuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_redusuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,9 +270,12 @@ public class insertusu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Ventas;
     private javax.swing.JTextField cedula;
     private javax.swing.JTextField email;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -238,8 +285,11 @@ public class insertusu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField password;
+    private javax.swing.JButton redcli;
+    private javax.swing.JButton redusu;
     private javax.swing.JTextField usu;
     // End of variables declaration//GEN-END:variables
 }
