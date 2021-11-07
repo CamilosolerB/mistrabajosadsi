@@ -15,6 +15,7 @@ import javax.swing.JTextField;
  */
 public class insertusu extends javax.swing.JFrame {
     viscli vis = new viscli();
+    proveedores pro = new proveedores();
     Usuarios usuario = new Usuarios(this);
 
     public JTextField getCedula() {
@@ -205,6 +206,11 @@ public class insertusu extends javax.swing.JFrame {
         getContentPane().add(redusu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 40));
 
         jButton2.setText("Proveedores");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, 40));
 
         Ventas.setText("Ventas");
@@ -233,6 +239,12 @@ public class insertusu extends javax.swing.JFrame {
     private void redusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redusuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_redusuActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        pro.setVisible(true);
+        pro.setTitle("Insertar vendedor");
+        pro.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -59,4 +59,28 @@ public class UsuarioDAO {
         }
      return req;
     }
+    
+    public boolean insertarproveedor(ProveedorDTO pdto){
+    
+    boolean res=false;
+    
+        try {
+            ps=cnn.prepareStatement("INSERT INTO proveedores VALUES(?,?,?,?,?)");
+            ps.setLong(1, pdto.getNit());
+            ps.setString(2, pdto.getCiudad());
+            ps.setString(3, pdto.getDireccion());
+            ps.setString(4, pdto.getNombre());
+            ps.setString(5, pdto.getTelefono());
+            
+            if(ps.executeUpdate()>0){
+                res=true;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion :"+ex);
+        }
+    
+    
+    return res;
+        
+    }
 }
