@@ -24,6 +24,13 @@ public class UsuarioDTO {
         this.usuario = usuario;
     }
 
+    public UsuarioDTO(long cedula) {
+        this.cedula = cedula;
+        System.out.println(cedula+" dto");
+    }
+    
+    
+
     public long getCedula() {
         return cedula;
     }

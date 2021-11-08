@@ -20,6 +20,8 @@ public class UsuarioDAO {
     conexion con = new conexion();
     Connection cnn = con.connectdb();
     PreparedStatement ps;
+    ResultSet rs;
+    UsuarioDTO uss;
 
     public boolean insertarusuario(UsuarioDTO dto){
         
@@ -82,5 +84,47 @@ public class UsuarioDAO {
     
     return res;
         
+    }
+    
+    public boolean actualizarusu(UsuarioDTO udto){
+    
+        boolean y=false;
+        
+        try {
+            ps=cnn.prepareStatement("UPDATE usuarios SET email_usuario=?,nombre_usuario=?,"
+                    + "password=?,usuario=? WHERE cedula_usuarios=?");
+                    ps.setString(1, udto.getEmail());
+                    ps.setString(2, udto.getNombre());
+                    ps.setString(3, udto.getPassword());
+                    ps.setString(4, udto.getUsuario());
+                    ps.setLong(5, udto.getCedula());
+                    
+                if(ps.executeUpdate()>0){
+                    y=true;
+                }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion "+ex);
+            
+        }
+        
+        return y;
+    
+    }
+    
+    public UsuarioDTO consultausuario ( UsuarioDTO udto){
+        try {
+            ps=cnn.prepareStatement("SELECT * FROM usuarios WHERE cedula_usuarios=?");
+            ps.setLong(1, udto.getCedula());
+            rs=ps.executeQuery();
+            
+            if(rs.next()){
+                uss= new UsuarioDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "error"+ e);
+        }
+        
+        System.out.println(uss);
+        return uss;
     }
 }
