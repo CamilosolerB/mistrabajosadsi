@@ -81,8 +81,8 @@ public class proveedores extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(38, 255, 170));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\caans\\OneDrive\\Escritorio\\Adsi\\Java\\modulos\\mitienda\\img\\proveedor.png")); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 210));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/proveedor.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 340, 210));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Insertar proveedor");

@@ -25,6 +25,10 @@ public class ProveedorDTO {
         this.telefono = telefono;
     }
 
+    public ProveedorDTO(long nit) {
+        this.nit = nit;
+    }
+
     public long getNit() {
         return nit;
     }

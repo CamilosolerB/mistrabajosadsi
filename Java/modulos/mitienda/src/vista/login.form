@@ -33,7 +33,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="10" width="830" height="430"/>
+          <AbsoluteConstraints x="0" y="0" width="830" height="440"/>
         </Constraint>
       </Constraints>
 
@@ -167,7 +167,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\frutas.jpg"/>
+              <Image iconType="3" name="/vista/frutas.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
@@ -180,7 +180,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\frutas.jpg"/>
+              <Image iconType="3" name="/vista/frutas.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>
@@ -193,7 +193,7 @@
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\frutas.jpg"/>
+              <Image iconType="3" name="/vista/frutas.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel5"/>
           </Properties>

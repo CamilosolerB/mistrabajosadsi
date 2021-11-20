@@ -49,7 +49,7 @@ public Usuarios (insertusu vistusu){
     }
     
     public void actualizar(){
-           long ce;
+    long ce;
     boolean verify;
     String em,nom, pass, usu;
     ce=Long.parseLong(vistusu.getCedula().getText());

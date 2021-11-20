@@ -23,6 +23,10 @@ public class ClienteDTO {
         this.nombre = nombre;
         this.telefono = telefono;
     }
+    
+    public ClienteDTO(long cedula){
+        this.cedula = cedula;
+    }
 
     public long getCedula() {
         return cedula;

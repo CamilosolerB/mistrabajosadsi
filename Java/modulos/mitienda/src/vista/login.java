@@ -118,19 +118,19 @@ public class login extends javax.swing.JFrame {
         jLabel1.setText("Bienvenido Usuario");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 300, 40));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\caans\\OneDrive\\Escritorio\\Adsi\\Java\\modulos\\mitienda\\img\\frutas.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/frutas.jpg"))); // NOI18N
         jLabel6.setText("jLabel5");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 300, 170));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\caans\\OneDrive\\Escritorio\\Adsi\\Java\\modulos\\mitienda\\img\\frutas.jpg")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/frutas.jpg"))); // NOI18N
         jLabel8.setText("jLabel5");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 90));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\caans\\OneDrive\\Escritorio\\Adsi\\Java\\modulos\\mitienda\\img\\frutas.jpg")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/frutas.jpg"))); // NOI18N
         jLabel13.setText("jLabel5");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 300, 170));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 830, 430));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

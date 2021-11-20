@@ -22,7 +22,9 @@ public class UsuarioDAO {
     PreparedStatement ps;
     ResultSet rs;
     UsuarioDTO uss;
+    ClienteDTO ctus;
 
+    //CRUD de usuarios
     public boolean insertarusuario(UsuarioDTO dto){
         
         boolean dat=false;
@@ -41,52 +43,9 @@ public class UsuarioDAO {
         }
         return dat;
     }
-    
-    public boolean insertarcliente(ClienteDTO cto){
-        
-        boolean req=false;
-        
-        try {
-            ps=cnn.prepareStatement("INSERT INTO clientes VALUES(?,?,?,?,?)");
-            ps.setLong(1, cto.getCedula());
-            ps.setString(2, cto.getDireccion());
-            ps.setString(3, cto.getEmail());
-            ps.setString(4, cto.getNombre());
-            ps.setString(5, cto.getTelefono());
-            if(ps.executeUpdate()>0){
-                req=true;
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error en la insersion : "+ex);
-        }
-     return req;
-    }
-    
-    public boolean insertarproveedor(ProveedorDTO pdto){
-    
-    boolean res=false;
-    
-        try {
-            ps=cnn.prepareStatement("INSERT INTO proveedores VALUES(?,?,?,?,?)");
-            ps.setLong(1, pdto.getNit());
-            ps.setString(2, pdto.getCiudad());
-            ps.setString(3, pdto.getDireccion());
-            ps.setString(4, pdto.getNombre());
-            ps.setString(5, pdto.getTelefono());
-            
-            if(ps.executeUpdate()>0){
-                res=true;
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error en la insersion :"+ex);
-        }
-    
-    
-    return res;
-        
-    }
-    
-    public boolean actualizarusu(UsuarioDTO udto){
+
+
+        public boolean actualizarusu(UsuarioDTO udto){
     
         boolean y=false;
         
@@ -145,4 +104,115 @@ public class UsuarioDAO {
         System.out.println("dtro       "+uss);
         return uss;
     }
+    
+    //fin del CRUD de usuarios
+    
+    
+    
+    //inicio del CRUD de clientes
+    public boolean insertarcliente(ClienteDTO cto){
+        
+        boolean req=false;
+        
+        try {
+            ps=cnn.prepareStatement("INSERT INTO clientes VALUES(?,?,?,?,?)");
+            ps.setLong(1, cto.getCedula());
+            ps.setString(2, cto.getDireccion());
+            ps.setString(3, cto.getEmail());
+            ps.setString(4, cto.getNombre());
+            ps.setString(5, cto.getTelefono());
+            if(ps.executeUpdate()>0){
+                req=true;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion : "+ex);
+        }
+     return req;
+    }
+    
+    public boolean actualizarcli(ClienteDTO cto){
+    
+        boolean y=false;
+        
+        try {
+            ps=cnn.prepareStatement("UPDATE clientes SET direccion_cliente=?,email_cliente=?,"
+                    + "nombre_cliente=?,telefono_cliente=? WHERE cedula_clientes=?");
+                    ps.setString(1, cto.getDireccion());
+                    ps.setString(2, cto.getEmail());
+                    ps.setString(3, cto.getNombre());
+                    ps.setString(4, cto.getTelefono());
+                    ps.setLong(5, cto.getCedula());
+                    
+                if(ps.executeUpdate()>0){
+                    y=true;
+                }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion "+ex);
+            
+        }
+        
+        return y;
+    
+    }
+
+        public boolean deletecli (ClienteDTO cto) {
+        
+        boolean x=false;
+        
+                try {
+            ps=cnn.prepareStatement("DELETE FROM clientes WHERE cedula_clientes=?");
+                    ps.setLong(1, cto.getCedula());
+                    
+                if(ps.executeUpdate()>0){
+                    x=true;
+                }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la eliminacion: "+ex);
+            
+        }
+        
+        return x;
+    }
+    
+        public ClienteDTO consultacliente (ClienteDTO cto){
+        try {
+            ps=cnn.prepareStatement("SELECT * FROM clientes WHERE cedula_clientes=?");
+            ps.setLong(1, cto.getCedula());
+            rs=ps.executeQuery();
+            
+            if(rs.next()){
+                ctus= new ClienteDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "error"+ e);
+        }
+        
+        return ctus;
+    }
+    //inicio del CRUD de proveedor
+    public boolean insertarproveedor(ProveedorDTO pdto){
+    
+    boolean res=false;
+    
+        try {
+            ps=cnn.prepareStatement("INSERT INTO proveedores VALUES(?,?,?,?,?)");
+            ps.setLong(1, pdto.getNit());
+            ps.setString(2, pdto.getCiudad());
+            ps.setString(3, pdto.getDireccion());
+            ps.setString(4, pdto.getNombre());
+            ps.setString(5, pdto.getTelefono());
+            
+            if(ps.executeUpdate()>0){
+                res=true;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion :"+ex);
+        }
+    
+    
+    return res;
+        
+    }
+    
+
 }
