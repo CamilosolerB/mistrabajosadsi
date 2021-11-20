@@ -71,6 +71,22 @@ public Usuarios (insertusu vistusu){
     } 
     
     }
+    public void eliminar(){
+        long ce;
+        boolean check;
+        ce=Long.parseLong(vistusu.getCedula().getText());
+        
+        UsuarioDTO utdo = new UsuarioDTO(ce);
+        UsuarioDAO udao = new UsuarioDAO();
+        check = udao.deleteusu(utdo);
+        
+        if(check){
+            JOptionPane.showMessageDialog(null, "DDato eliminado correctamente");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Error al intentar borrar el archivo");
+        }
+    }
     
     public void consultar(){
         String e,user,pass,nom;

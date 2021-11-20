@@ -110,6 +110,24 @@ public class UsuarioDAO {
         return y;
     
     }
+    public boolean deleteusu (UsuarioDTO udto) {
+        
+        boolean x=false;
+        
+                try {
+            ps=cnn.prepareStatement("DELETE FROM usuarios WHERE cedula_usuarios=?");
+                    ps.setLong(1, udto.getCedula());
+                    
+                if(ps.executeUpdate()>0){
+                    x=true;
+                }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la eliminacion: "+ex);
+            
+        }
+        
+        return x;
+    }
     
     public UsuarioDTO consultausuario ( UsuarioDTO udto){
         try {
@@ -124,7 +142,7 @@ public class UsuarioDAO {
             JOptionPane.showMessageDialog(null, "error"+ e);
         }
         
-        System.out.println(uss);
+        System.out.println("dtro       "+uss);
         return uss;
     }
 }

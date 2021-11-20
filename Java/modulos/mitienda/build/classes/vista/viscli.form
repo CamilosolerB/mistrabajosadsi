@@ -18,25 +18,10 @@
       </Layout>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
-        </Property>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
-        </Property>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
-        </Property>
-      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -226,7 +211,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -238,7 +223,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -250,7 +235,7 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -262,7 +247,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -272,11 +257,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="150" y="170" width="320" height="170"/>
@@ -284,11 +264,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="150" y="240" width="320" height="170"/>
@@ -298,7 +273,7 @@
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -310,7 +285,7 @@
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -322,7 +297,7 @@
     <Component class="javax.swing.JLabel" name="jLabel14">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -334,7 +309,7 @@
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -346,7 +321,7 @@
     <Component class="javax.swing.JLabel" name="jLabel15">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -356,11 +331,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel16">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
-        </Property>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="430" y="240" width="320" height="170"/>
@@ -370,7 +340,7 @@
     <Component class="javax.swing.JLabel" name="jLabel17">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\caans\OneDrive\Escritorio\Adsi\Java\modulos\mitienda\img\download.jpg"/>
+          <Image iconType="3" name="/vista/frutas.jpg"/>
         </Property>
       </Properties>
       <Constraints>
