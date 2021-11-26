@@ -1,8 +1,9 @@
 
 package mitienda;
 
-import vista.insertusu;
-import vista.viscli;
+
+import vista.login;
+
 
 public class Mitienda {
 
@@ -10,10 +11,11 @@ public class Mitienda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        insertusu ins = new insertusu();
-        ins.setVisible(true);
-        ins.setTitle("Aplicacion de tienda");
-        ins.setLocationRelativeTo(null);
+        
+        login log = new login();
+        log.setVisible(true);
+        log.setTitle("Aplicacion de tienda");
+        log.setLocationRelativeTo(null);
         
         
     }

@@ -12,7 +12,7 @@ public class conexion {
            Class.forName("com.mysql.cj.jdbc.Driver");
            try {
                mysql = DriverManager.getConnection("jdbc:mysql://127.0.0.1/tienda","root","Camiloesbueno.");
-               JOptionPane.showMessageDialog(null, "conexion exitosa");
+               System.out.println("conexion exitosa");
                 
            } catch (SQLException ex) {
                JOptionPane.showMessageDialog(null,"El error es "+ ex);

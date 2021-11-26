@@ -5,11 +5,12 @@
  */
 package modelo;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
 import controlador.conexion;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -17,12 +18,15 @@ import javax.swing.JOptionPane;
  * @author caans
  */
 public class UsuarioDAO {
+
+
     conexion con = new conexion();
     Connection cnn = con.connectdb();
     PreparedStatement ps;
     ResultSet rs;
     UsuarioDTO uss;
     ClienteDTO ctus;
+    ProveedorDTO pros;
 
     //CRUD de usuarios
     public boolean insertarusuario(UsuarioDTO dto){
@@ -105,6 +109,23 @@ public class UsuarioDAO {
         return uss;
     }
     
+    public ArrayList <UsuarioDTO> consultagenusu () {
+    ArrayList <UsuarioDTO> lista = new ArrayList();
+    try{
+        ps=cnn.prepareStatement("Select * from usuarios");
+        rs=ps.executeQuery();
+        if(rs.next()){
+            uss= new UsuarioDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+        lista.add(uss);  
+        }
+  
+    }
+        catch(SQLException ex){
+             JOptionPane.showMessageDialog(null, "Error en la consulta "+ex);
+    }
+    return lista;
+}
+
     //fin del CRUD de usuarios
     
     
@@ -189,6 +210,9 @@ public class UsuarioDAO {
         
         return ctus;
     }
+    //fin del CRUD de clientes    
+        
+        
     //inicio del CRUD de proveedor
     public boolean insertarproveedor(ProveedorDTO pdto){
     
@@ -214,5 +238,88 @@ public class UsuarioDAO {
         
     }
     
-
+        public boolean actualizarpro(ProveedorDTO pto){
+    
+        boolean y=false;
+        
+        try {
+            ps=cnn.prepareStatement("UPDATE proveedores SET ciudad_proveedor=?,direccion_proveedor=?,"
+                    + "nombre_proveedor=?,telefono_proveedor=? WHERE nitproveedor=?");
+                    ps.setString(1, pto.getCiudad());
+                    ps.setString(2, pto.getDireccion());
+                    ps.setString(3, pto.getNombre());
+                    ps.setString(4, pto.getTelefono());
+                    ps.setLong(5, pto.getNit());
+                    
+                if(ps.executeUpdate()>0){
+                    y=true;
+                }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la insersion "+ex);
+            
+        }
+        
+        return y;
+    
+    }
+        
+    public boolean deletepro (ProveedorDTO pto) {
+        
+        boolean x=false;
+        
+                try {
+            ps=cnn.prepareStatement("DELETE FROM proveedores WHERE nitproveedor=?");
+                    ps.setLong(1, pto.getNit());
+                    
+                if(ps.executeUpdate()>0){
+                    x=true;
+                }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error en la eliminacion: "+ex);
+            
+        }
+        
+        return x;
+    }
+    
+    public ProveedorDTO consultaproveedor (ProveedorDTO pto){
+        try {
+            ps=cnn.prepareStatement("SELECT * FROM clientes WHERE nitproveedor=?");
+            ps.setLong(1, pto.getNit());
+            rs=ps.executeQuery();
+            
+            if(rs.next()){
+                pros= new ProveedorDTO(rs.getLong(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5));
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "error"+ e);
+        }
+        
+        return pros;
+    }
+    
+    //fin del CRUD de proveedores
+    
+    
+    
+    //consulta para el nit proveedor en la tabla de productos
+    
+    public ArrayList<String> consultanit(){
+        ArrayList<String> lista = new ArrayList<String>();
+        try {
+            ps=cnn.prepareStatement("Select nitproveedor from proveedores");
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+                lista.add(rs.getString("nitproveedor"));
+            }
+            
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+        
+        return lista;
+    }
+    
 }

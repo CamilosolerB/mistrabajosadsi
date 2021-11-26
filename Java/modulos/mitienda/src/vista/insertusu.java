@@ -8,6 +8,7 @@ package vista;
 import controlador.Usuarios;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -88,6 +89,9 @@ public class insertusu extends javax.swing.JFrame {
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        button1 = new java.awt.Button();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -105,16 +109,18 @@ public class insertusu extends javax.swing.JFrame {
         actualizar = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         redcli = new javax.swing.JButton();
         redusu = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         Ventas = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
 
         jRadioButton1.setText("jRadioButton1");
 
@@ -130,6 +136,12 @@ public class insertusu extends javax.swing.JFrame {
         jMenu4.setText("Edit");
         jMenuBar2.add(jMenu4);
 
+        jMenuItem2.setText("jMenuItem2");
+
+        jMenuItem3.setText("jMenuItem3");
+
+        button1.setLabel("button1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -139,6 +151,7 @@ public class insertusu extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 190, 40));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(0, 0, 0), null, null));
 
         jLabel3.setText("Cedula");
 
@@ -224,7 +237,7 @@ public class insertusu extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -257,14 +270,10 @@ public class insertusu extends javax.swing.JFrame {
                     .addComponent(actualizar)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 390, 320));
-
-        jLabel1.setBackground(new java.awt.Color(200, 222, 208));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/basket-fruit-4k-full-hd-wallpaper-preview.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 740, 460));
 
         redcli.setText("Clientes");
         redcli.addActionListener(new java.awt.event.ActionListener() {
@@ -294,7 +303,19 @@ public class insertusu extends javax.swing.JFrame {
         getContentPane().add(Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 70, 40));
 
         jButton3.setText("Productos");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 80, 40));
+
+        jLabel9.setBackground(new java.awt.Color(200, 222, 208));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/basket-fruit-4k-full-hd-wallpaper-preview.jpg"))); // NOI18N
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 860, 480));
+
+        jButton6.setText("reportes");
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, -7, 80, 50));
 
         jMenu5.setText("File");
         jMenuBar3.add(jMenu5);
@@ -305,6 +326,14 @@ public class insertusu extends javax.swing.JFrame {
         jMenu6.add(jMenuItem1);
 
         jMenuBar3.add(jMenu6);
+
+        jMenu7.setText("Cliente");
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
+        jMenuBar3.add(jMenu7);
 
         setJMenuBar(jMenuBar3);
 
@@ -322,17 +351,20 @@ public class insertusu extends javax.swing.JFrame {
     private void redcliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redcliActionPerformed
         vis.setTitle("Insertar cliente");
         vis.setVisible(true);
-        
+        vis.setLocationRelativeTo(null);
+        this.setVisible(false);
     }//GEN-LAST:event_redcliActionPerformed
 
     private void redusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redusuActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_redusuActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         pro.setVisible(true);
         pro.setTitle("Insertar vendedor");
         pro.setLocationRelativeTo(null);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
@@ -346,6 +378,16 @@ public class insertusu extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         usuario.eliminar();
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        vis.setTitle("Insertar cliente");
+        vis.setVisible(true);
+    }//GEN-LAST:event_jMenu7ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       productos proc = new productos();
+       proc.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -385,6 +427,7 @@ public class insertusu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Ventas;
     private javax.swing.JButton actualizar;
+    private java.awt.Button button1;
     private javax.swing.JTextField cedula;
     private javax.swing.JTextField email;
     private javax.swing.JButton jButton1;
@@ -392,7 +435,7 @@ public class insertusu extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -400,16 +443,20 @@ public class insertusu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JTextField nombre;
