@@ -321,5 +321,26 @@ public class UsuarioDAO {
         
         return lista;
     }
+ 
     
+    //insertar un producto
+    public boolean insertarproducto(productosDTO pto){
+            
+        boolean dat=false;
+        try {
+            ps=cnn.prepareStatement("INSERT INTO productos VALUES(?,?,?,?,?,?)");
+        ps.setLong(1, pto.getCodigo());
+        ps.setDouble(2, pto.getIva());
+        ps.setLong(3, pto.getNit());
+        ps.setString(4, pto.getNombre());
+        ps.setDouble(5, pto.getPrecioc());
+        ps.setDouble(6, pto.getPreciov());
+        if(ps.executeUpdate()>0){
+            dat=true;
+        }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Error en la insersion "+ex);
+        }
+        return dat;
+    }
 }

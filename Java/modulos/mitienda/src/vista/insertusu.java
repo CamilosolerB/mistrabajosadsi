@@ -300,6 +300,11 @@ public class insertusu extends javax.swing.JFrame {
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, 40));
 
         Ventas.setText("Ventas");
+        Ventas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VentasActionPerformed(evt);
+            }
+        });
         getContentPane().add(Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 70, 40));
 
         jButton3.setText("Productos");
@@ -315,6 +320,11 @@ public class insertusu extends javax.swing.JFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 860, 480));
 
         jButton6.setText("reportes");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, -7, 80, 50));
 
         jMenu5.setText("File");
@@ -357,7 +367,6 @@ public class insertusu extends javax.swing.JFrame {
 
     private void redusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redusuActionPerformed
         this.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_redusuActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -387,7 +396,24 @@ public class insertusu extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        productos proc = new productos();
        proc.setVisible(true);
+       this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void VentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VentasActionPerformed
+        Ventas ven = new Ventas();
+        ven.setVisible(true);
+        this.setVisible(false);
+        ven.setTitle("Facturacion");
+        ven.setLocationRelativeTo(null);
+    }//GEN-LAST:event_VentasActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        reportes rep = new reportes();
+        rep.setVisible(true);
+        rep.setTitle("Reportes");
+        this.setVisible(false);
+        rep.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
