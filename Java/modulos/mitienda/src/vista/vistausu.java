@@ -5,17 +5,50 @@
  */
 package vista;
 
-/**
- *
- * @author PC
- */
+import controlador.conexion;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 public class vistausu extends javax.swing.JFrame {
 
+    conexion con = new conexion();
+    Connection conect = con.connectdb();
+    PreparedStatement ps;
+    ResultSet rs;
     /**
      * Creates new form vistausu
      */
     public vistausu() {
         initComponents();
+        mostrardatos();
+    }
+    
+    public void mostrardatos () {
+        DefaultTableModel tusuario = new DefaultTableModel();
+        tusuario.addColumn("Numero de cedula");
+        tusuario.addColumn("Email");
+        tusuario.addColumn("Nombre del usuario");
+        tusuario.addColumn("Contraseña");
+        tusuario.addColumn("Usuario");
+        TablaUsuarios.setModel(tusuario);
+        
+        String []datos = new String[5];
+        
+        try {
+           ps=conect.prepareStatement("Select * from usuarios");
+           rs=ps.executeQuery();
+           while(rs.next()){
+               datos[0] = rs.getString(1);
+               datos[1] = rs.getString(2);
+               datos[2] = rs.getString(3);
+               datos[3] = rs.getString(4);
+               datos[4] = rs.getString(5);
+            tusuario.addRow(datos);
+           }
+           TablaUsuarios.setModel(tusuario);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Sucedio el error: "+e);
+        }
     }
 
     /**
@@ -30,7 +63,7 @@ public class vistausu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TablaUsuarios = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,18 +83,15 @@ public class vistausu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, -1, 70));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TablaUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TablaUsuarios);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 760, 320));
 
@@ -116,10 +146,10 @@ public class vistausu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TablaUsuarios;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

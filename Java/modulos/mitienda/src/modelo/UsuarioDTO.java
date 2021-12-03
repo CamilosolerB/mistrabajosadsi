@@ -26,7 +26,6 @@ public class UsuarioDTO {
 
     public UsuarioDTO(long cedula) {
         this.cedula = cedula;
-        System.out.println(cedula+" dto");
     }
     
     

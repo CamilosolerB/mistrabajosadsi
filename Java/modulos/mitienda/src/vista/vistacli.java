@@ -5,19 +5,49 @@
  */
 package vista;
 
-/**
- *
- * @author PC
- */
+import controlador.conexion;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 public class vistacli extends javax.swing.JFrame {
 
-    /**
-     * Creates new form vistacli
-     */
+    conexion con = new conexion();
+    Connection conect = con.connectdb();
+    PreparedStatement ps;
+    ResultSet rs;
     public vistacli() {
         initComponents();
+        mostrardatos();
     }
 
+        public void mostrardatos () {
+        DefaultTableModel tusuario = new DefaultTableModel();
+        tusuario.addColumn("Numero de cedula");
+        tusuario.addColumn("Direccion");
+        tusuario.addColumn("Email");
+        tusuario.addColumn("Nombre");
+        tusuario.addColumn("Telefono");
+        TablaClientes.setModel(tusuario);
+        
+        String []datos = new String[5];
+        
+        try {
+           ps=conect.prepareStatement("Select * from clientes");
+           rs=ps.executeQuery();
+           while(rs.next()){
+               datos[0] = rs.getString(1);
+               datos[1] = rs.getString(2);
+               datos[2] = rs.getString(3);
+               datos[3] = rs.getString(4);
+               datos[4] = rs.getString(5);
+            tusuario.addRow(datos);
+           }
+           TablaClientes.setModel(tusuario);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Sucedio el error: "+e);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,7 +59,7 @@ public class vistacli extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TablaClientes = new javax.swing.JTable();
         retorno = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -40,19 +70,16 @@ public class vistacli extends javax.swing.JFrame {
         jLabel2.setText("Tabla de clientes");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TablaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
-        jTable1.setCellSelectionEnabled(true);
-        jScrollPane1.setViewportView(jTable1);
+        TablaClientes.setCellSelectionEnabled(true);
+        jScrollPane1.setViewportView(TablaClientes);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 890, -1));
 
@@ -117,10 +144,10 @@ public class vistacli extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TablaClientes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton retorno;
     // End of variables declaration//GEN-END:variables
 }
