@@ -353,7 +353,7 @@ public class UsuarioDAO {
             ps.setLong(1, pto.getCodigo());
             rs=ps.executeQuery();
             if(rs.next()){
-            prod = new productosDTO(rs.getLong(1), rs.getString(2), rs.getLong(3), rs.getDouble(4), rs.getDouble(5), rs.getDouble(6));
+            prod = new productosDTO(rs.getLong(1), rs.getDouble(2), rs.getLong(3), rs.getString(4), rs.getDouble(5), rs.getDouble(6));
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);

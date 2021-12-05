@@ -36,7 +36,7 @@ public class Product {
         precioc=Double.parseDouble(produ.getPrecioc().getText());
         iva=Double.parseDouble(produ.getIva().getText());
         preciov=Double.parseDouble(produ.getPreciov().getText());
-        productosDTO dto = new productosDTO(cod,nombre,nit,precioc,iva,preciov);
+        productosDTO dto = new productosDTO(cod,iva,nit,nombre,precioc,preciov);
         UsuarioDAO udao = new UsuarioDAO();
         check=udao.insertarproducto(dto);
         if(check){

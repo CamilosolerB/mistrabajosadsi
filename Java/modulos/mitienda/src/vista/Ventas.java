@@ -9,6 +9,7 @@ import controlador.ventas;
 import java.awt.HeadlessException;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -21,7 +22,7 @@ public class Ventas extends javax.swing.JFrame {
     
     ventas vent = new ventas(this);
 
-    public Ventas(JTextField cedula1, JTextField codigo, JTextField codigo1, JTextField codigo2, JTextField codigo3, JButton jButton1, JButton jButton10, JButton jButton2, JButton jButton3, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JButton jButton9, JLabel jLabel1, JLabel jLabel10, JLabel jLabel11, JLabel jLabel2, JLabel jLabel3, JLabel jLabel4, JLabel jLabel5, JLabel jLabel6, JLabel jLabel7, JLabel jLabel8, JLabel jLabel9, JPanel jPanel1, JTextField jTextField1, JTextField jTextField3, JTextField jTextField4, JTextField jTextField5, JTextField jTextField6, JTextField nombre, JTextField nombre1, JTextField nombre2, JTextField nombre3, JTextField total1, JTextField total2, JTextField total3, JTextField total4) throws HeadlessException {
+    public Ventas(JTextField cedula1, JTextField codigo, JTextField codigo1, JTextField codigo2, JTextField codigo3, JButton jButton1, JButton jButton10, JButton jButton2, JButton jButton3, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JButton jButton9, JLabel jLabel1, JLabel jLabel10, JLabel jLabel11, JLabel jLabel2, JLabel jLabel3, JLabel jLabel4, JLabel jLabel5, JLabel jLabel6, JLabel jLabel7, JLabel jLabel8, JLabel jLabel9, JPanel jPanel1, JTextField jTextField1, JTextField jTextField3, JTextField jTextField4, JTextField jTextField5, JTextField jTextField6, JTextField nombre, JTextField nombre1, JTextField nombre2, JTextField nombre3, JTextField total1, JTextField total2, JTextField total3, JTextField total4,JTextField iva1, JTextField iva2, JTextField iva3) throws HeadlessException {
         this.cedula1 = cedula1;
         this.codigo = codigo;
         this.codigo1 = codigo1;
@@ -49,23 +50,35 @@ public class Ventas extends javax.swing.JFrame {
         this.jLabel8 = jLabel8;
         this.jLabel9 = jLabel9;
         this.jPanel1 = jPanel1;
-        this.jTextField1 = jTextField1;
-        this.jTextField3 = jTextField3;
-        this.jTextField4 = jTextField4;
-        this.jTextField5 = jTextField5;
-        this.jTextField6 = jTextField6;
+        this.cantidad3 = jTextField1;
+        this.cantidad2 = jTextField3;
+        this.cantidad1 = jTextField4;
+        this.toliva = jTextField5;
+        this.totalfinal = jTextField6;
         this.nombre = nombre;
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
         this.nombre3 = nombre3;
         this.total1 = total1;
         this.total2 = total2;
-        this.total3 = total3;
+        this.totalvent = total3;
         this.total4 = total4;
+        this.iva1 = iva1;
+        this.iva2 = iva2;
+        this.iva3 = iva3;
     }
-    
-    
 
+    public JTextField getIva1() {
+        return iva1;
+    }
+
+    public JTextField getIva2() {
+        return iva2;
+    }
+
+    public JTextField getIva3() {
+        return iva3;
+    }
     public JTextField getCedula1() {
         return cedula1;
     }
@@ -87,23 +100,23 @@ public class Ventas extends javax.swing.JFrame {
     }
 
     public JTextField getjTextField1() {
-        return jTextField1;
+        return cantidad3;
     }
 
     public JTextField getjTextField3() {
-        return jTextField3;
+        return cantidad2;
     }
 
     public JTextField getjTextField4() {
-        return jTextField4;
+        return cantidad1;
     }
 
     public JTextField getjTextField5() {
-        return jTextField5;
+        return toliva;
     }
 
     public JTextField getjTextField6() {
-        return jTextField6;
+        return totalfinal;
     }
 
     public JTextField getNombre() {
@@ -131,7 +144,7 @@ public class Ventas extends javax.swing.JFrame {
     }
 
     public JTextField getTotal3() {
-        return total3;
+        return totalvent;
     }
 
     public JTextField getTotal4() {
@@ -179,29 +192,33 @@ public class Ventas extends javax.swing.JFrame {
         nombre1 = new javax.swing.JTextField();
         nombre2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        cantidad3 = new javax.swing.JTextField();
+        cantidad2 = new javax.swing.JTextField();
+        cantidad1 = new javax.swing.JTextField();
         total1 = new javax.swing.JTextField();
-        total3 = new javax.swing.JTextField();
+        totalvent = new javax.swing.JTextField();
         total4 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        toliva = new javax.swing.JTextField();
+        totalfinal = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         codigo = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        iva1 = new javax.swing.JTextField();
+        iva2 = new javax.swing.JTextField();
+        iva3 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(codigo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 140, -1));
+        getContentPane().add(codigo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 140, -1));
 
         jButton1.setText("Usuarios");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -270,7 +287,12 @@ public class Ventas extends javax.swing.JFrame {
         getContentPane().add(total2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 110, -1));
 
         jButton6.setText("Consultar");
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, -1, -1));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
 
         jLabel3.setText("Nombre");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, -1));
@@ -282,8 +304,8 @@ public class Ventas extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cedula1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 140, -1));
-        getContentPane().add(codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 140, -1));
-        getContentPane().add(codigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 140, -1));
+        getContentPane().add(codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 140, -1));
+        getContentPane().add(codigo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 140, -1));
 
         jLabel4.setText("Codigo producto");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 130, -1));
@@ -297,27 +319,42 @@ public class Ventas extends javax.swing.JFrame {
         getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
 
         jButton8.setText("Consultar");
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, -1, -1));
 
         jButton9.setText("Consultar");
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
-        getContentPane().add(nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 140, -1));
-        getContentPane().add(nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 140, -1));
-        getContentPane().add(nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 140, -1));
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
+        getContentPane().add(nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 140, -1));
+        getContentPane().add(nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 140, -1));
+        getContentPane().add(nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 140, -1));
 
         jLabel5.setText("Nombre producto");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
 
-        jTextField1.setText("0");
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 30, -1));
+        cantidad3.setText("0");
+        getContentPane().add(cantidad3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 30, -1));
 
-        jTextField3.setText("0");
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 30, -1));
+        cantidad2.setText("0");
+        getContentPane().add(cantidad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 30, -1));
 
-        jTextField4.setText("0");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 30, -1));
+        cantidad1.setText("0");
+        cantidad1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cantidad1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cantidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 30, -1));
         getContentPane().add(total1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, 110, -1));
-        getContentPane().add(total3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 110, -1));
+        getContentPane().add(totalvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 110, -1));
         getContentPane().add(total4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 110, -1));
 
         jLabel6.setText("Cantidad");
@@ -328,8 +365,8 @@ public class Ventas extends javax.swing.JFrame {
 
         jLabel8.setText("Total venta");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 70, 20));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 110, -1));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 110, -1));
+        getContentPane().add(toliva, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 360, 110, -1));
+        getContentPane().add(totalfinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 110, -1));
 
         jLabel11.setText("Codigo de venta");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, -1, -1));
@@ -351,7 +388,18 @@ public class Ventas extends javax.swing.JFrame {
         getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 90, 100));
 
         jButton11.setText("Calcular valor");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 270, -1, -1));
+        getContentPane().add(iva1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 40, -1));
+        getContentPane().add(iva2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 40, -1));
+        getContentPane().add(iva3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 40, -1));
+
+        jLabel12.setText("IVA");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/ventas.jpg"))); // NOI18N
@@ -393,7 +441,7 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(null, "¿Quiere realizar esta venta?");
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -411,6 +459,65 @@ public class Ventas extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         vent.consultar();
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        vent.consultaproducto1();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void cantidad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidad1ActionPerformed
+        
+
+    }//GEN-LAST:event_cantidad1ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        vent.consultaproducto2();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        double valor1,cant1,total1a,valor2,cant2,total2a,valor3,cant3,total3; 
+        valor1=Double.parseDouble(total4.getText());
+        cant1=Double.parseDouble(cantidad1.getText());
+        total1a=valor1*cant1;
+        String resultado1 = String.valueOf(total1a);
+        total4.setText(resultado1);
+        
+        valor2=Double.parseDouble(total2.getText());
+        cant2=Double.parseDouble(cantidad2.getText());
+        total2a=valor2*cant2;
+        String resultado2 = String.valueOf(total2a);
+        total2.setText(resultado2);
+        
+        valor3=Double.parseDouble(total1.getText());
+        cant3=Double.parseDouble(cantidad3.getText());
+        total3=valor3*cant3;
+        String resultado3 = String.valueOf(total3);
+        total1.setText(resultado3);
+        
+        double suma = total1a + total2a +total3;
+        String total = String.valueOf(suma);
+        totalvent.setText(total);
+        
+        double va1,va2,va3,tiva;
+        va1=Double.parseDouble(iva1.getText());
+        va2=Double.parseDouble(iva2.getText());
+        va3=Double.parseDouble(iva3.getText());
+        tiva=(va1+va2+va3)/3;
+        String resiva = String.valueOf(tiva);
+        toliva.setText(resiva);
+        
+        
+        //total venta
+        double totfin,valto,valiva;
+        valto=Double.parseDouble(totalvent.getText());
+        valiva=Double.parseDouble(toliva.getText())/100;
+        totfin=(valto*valiva)+valto;
+        String finaliza = String.valueOf(totfin);
+        totalfinal.setText(finaliza);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        vent.consultaproducto3();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -448,11 +555,17 @@ public class Ventas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cantidad1;
+    private javax.swing.JTextField cantidad2;
+    private javax.swing.JTextField cantidad3;
     private javax.swing.JTextField cedula1;
     private javax.swing.JTextField codigo;
     private javax.swing.JTextField codigo1;
     private javax.swing.JTextField codigo2;
     private javax.swing.JTextField codigo3;
+    private javax.swing.JTextField iva1;
+    private javax.swing.JTextField iva2;
+    private javax.swing.JTextField iva3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -467,6 +580,7 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -476,18 +590,15 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField nombre;
     private javax.swing.JTextField nombre1;
     private javax.swing.JTextField nombre2;
     private javax.swing.JTextField nombre3;
+    private javax.swing.JTextField toliva;
     private javax.swing.JTextField total1;
     private javax.swing.JTextField total2;
-    private javax.swing.JTextField total3;
     private javax.swing.JTextField total4;
+    private javax.swing.JTextField totalfinal;
+    private javax.swing.JTextField totalvent;
     // End of variables declaration//GEN-END:variables
 }

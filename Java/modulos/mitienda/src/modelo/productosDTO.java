@@ -17,11 +17,12 @@ public class productosDTO {
     private double iva;
     private double preciov;
 
-    public productosDTO(long nit) {
-        this.nit = nit;
+    
+    public productosDTO(long codigo){
+        this.codigo = codigo;
     }
 
-    public productosDTO(long codigo, String nombre, long nit, double precioc, double iva, double preciov) {
+    public productosDTO(long codigo,double iva , long nit, String nombre,double precioc, double preciov) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.nit = nit;
