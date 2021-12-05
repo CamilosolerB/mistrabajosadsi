@@ -25,7 +25,9 @@ public class UsuarioDAO {
     PreparedStatement ps;
     ResultSet rs;
     UsuarioDTO uss;
+    productosDTO prod;
     ClienteDTO ctus;
+    VentasDTO vnto;
     ProveedorDTO pros;
 
     //CRUD de usuarios
@@ -342,5 +344,20 @@ public class UsuarioDAO {
             JOptionPane.showMessageDialog(null,"Error en la insersion "+ex);
         }
         return dat;
+    }
+    
+    public productosDTO consultaproductos( productosDTO pto){
+        
+        try {
+            ps=cnn.prepareStatement("Select * from productos WHERE codigo_producto=?");
+            ps.setLong(1, pto.getCodigo());
+            rs=ps.executeQuery();
+            if(rs.next()){
+            prod = new productosDTO(rs.getLong(1), rs.getString(2), rs.getLong(3), rs.getDouble(4), rs.getDouble(5), rs.getDouble(6));
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return prod;
     }
 }
