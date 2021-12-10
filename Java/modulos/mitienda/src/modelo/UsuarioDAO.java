@@ -360,4 +360,66 @@ public class UsuarioDAO {
         }
         return prod;
     }
+    public boolean insertarventa( VentasDTO vent){
+    
+    boolean sipasa=false;
+    
+        try {
+            ps=cnn.prepareStatement("Insert into ventas VALUES(?,?,?,?,?,?)");
+            ps.setLong(1, vent.getCodigot());
+            ps.setLong(2, vent.getCedula());
+            ps.setLong(3, vent.getCedula());
+            ps.setDouble(4, vent.getIva());
+            ps.setDouble(5, vent.getValortotal());
+            ps.setDouble(6, vent.getValorventa());
+            
+            if(ps.executeUpdate()>0){
+                //primer valor
+                try {
+                ps=cnn.prepareStatement("Insert into detalle_venta (cantidad_producto,codigo_producto_det,codigo_venta,valor_total,valor_venta, valoriva)"
+                        + " VALUES (?,?,?,?,?,?),(?,?,?,?,?,?),(?,?,?,?,?,?)");
+                ps.setInt(1, vent.getCantidad1());   
+                ps.setLong(2, vent.getCodigo1());
+                ps.setLong(3, vent.getCodigot());
+                ps.setDouble(4, vent.getValortotal1());
+                ps.setDouble(5, vent.getValorventa1());
+                ps.setDouble(6, vent.getIva1());
+                
+                //segundo registro
+                
+                ps.setInt(7, vent.getCantidad2());   
+                ps.setLong(8, vent.getCodigo2());
+                ps.setLong(9, vent.getCodigot());
+                ps.setDouble(10, vent.getValortotal2());
+                ps.setDouble(11, vent.getValorventa2());
+                ps.setDouble(12, vent.getIva2());
+                
+                //tercer registro
+                ps.setInt(13, vent.getCantidad3());   
+                ps.setLong(14, vent.getCodigo3());
+                ps.setLong(15, vent.getCodigot());
+                ps.setDouble(16, vent.getValortotal3());
+                ps.setDouble(17, vent.getValorventa3());
+                ps.setDouble(18, vent.getIva3());
+                
+                    if(ps.executeUpdate()>0){
+                    sipasa=true;
+                    JOptionPane.showMessageDialog(null, "Todos los datos han sido insertados correctamente");
+                    }
+                } catch (SQLException e) {
+                    JOptionPane.showMessageDialog(null, e);
+                }
+            }
+        }
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+    return sipasa;
+
 }
+}
+
+//insersion de una venta con sus detalles
+
+

@@ -22,7 +22,7 @@ public class Ventas extends javax.swing.JFrame {
     
     ventas vent = new ventas(this);
 
-    public Ventas(JTextField cedula1, JTextField codigo, JTextField codigo1, JTextField codigo2, JTextField codigo3, JButton jButton1, JButton jButton10, JButton jButton2, JButton jButton3, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JButton jButton9, JLabel jLabel1, JLabel jLabel10, JLabel jLabel11, JLabel jLabel2, JLabel jLabel3, JLabel jLabel4, JLabel jLabel5, JLabel jLabel6, JLabel jLabel7, JLabel jLabel8, JLabel jLabel9, JPanel jPanel1, JTextField jTextField1, JTextField jTextField3, JTextField jTextField4, JTextField jTextField5, JTextField jTextField6, JTextField nombre, JTextField nombre1, JTextField nombre2, JTextField nombre3, JTextField total1, JTextField total2, JTextField total3, JTextField total4,JTextField iva1, JTextField iva2, JTextField iva3) throws HeadlessException {
+    public Ventas(JTextField cedula1, JTextField codigo, JTextField codigo1, JTextField codigo2, JTextField codigo3, JButton jButton1, JButton jButton10, JButton jButton2, JButton jButton3, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JButton jButton9, JLabel jLabel1, JLabel jLabel10, JLabel jLabel11, JLabel jLabel2, JLabel jLabel3, JLabel jLabel4, JLabel jLabel5, JLabel jLabel6, JLabel jLabel7, JLabel jLabel8, JLabel jLabel9, JPanel jPanel1, JTextField jTextField1, JTextField jTextField3, JTextField jTextField4, JTextField jTextField5, JTextField jTextField6, JTextField nombre, JTextField nombre1, JTextField nombre2, JTextField nombre3, JTextField total1, JTextField total2, JTextField total3, JTextField total4,JTextField iva1, JTextField iva2, JTextField iva3, JTextField toliva, JTextField totalfinal, JTextField totalvent) throws HeadlessException {
         this.cedula1 = cedula1;
         this.codigo = codigo;
         this.codigo1 = codigo1;
@@ -66,7 +66,35 @@ public class Ventas extends javax.swing.JFrame {
         this.iva1 = iva1;
         this.iva2 = iva2;
         this.iva3 = iva3;
+        this.toliva = toliva;
+        this.totalfinal = totalfinal;
+        this.totalvent = totalvent;
     }
+
+    public JTextField getCantidad1() {
+        return cantidad1;
+    }
+
+    public JTextField getCantidad2() {
+        return cantidad2;
+    }
+
+    public JTextField getCantidad3() {
+        return cantidad3;
+    }
+
+    public JTextField getToliva() {
+        return toliva;
+    }
+
+    public JTextField getTotalfinal() {
+        return totalfinal;
+    }
+
+    public JTextField getTotalvent() {
+        return totalvent;
+    }
+
 
     public JTextField getIva1() {
         return iva1;
@@ -393,7 +421,7 @@ public class Ventas extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 270, -1, -1));
+        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, -1, -1));
         getContentPane().add(iva1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 40, -1));
         getContentPane().add(iva2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 40, -1));
         getContentPane().add(iva3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 40, -1));
@@ -441,7 +469,7 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        JOptionPane.showConfirmDialog(null, "¿Quiere realizar esta venta?");
+        vent.insertarventa();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

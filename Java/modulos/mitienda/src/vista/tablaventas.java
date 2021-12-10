@@ -5,19 +5,53 @@
  */
 package vista;
 
+import controlador.conexion;
+import java.sql.*;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author PC
  */
 public class tablaventas extends javax.swing.JFrame {
 
+    conexion con = new conexion();
+    Connection conect = con.connectdb();
+    PreparedStatement ps;
+    ResultSet rs;
     /**
      * Creates new form tablaventas
      */
     public tablaventas() {
         initComponents();
+        traedatos();
     }
 
+    public void traedatos(){
+        DefaultTableModel tabla = new DefaultTableModel();
+        tabla.addColumn("Cedula");
+        tabla.addColumn("Nombre");
+        tabla.addColumn("Valor total ventas");
+        tablaventas.setModel(tabla);
+        
+        String []datos = new String[3];
+        
+        try {
+            ps=conect.prepareStatement("Select cedula_cliente, nombre_cliente, total_venta from ventas"
+                    + " INNER JOIN clientes on (cedula_cliente=cedula_clientes)");
+            rs=ps.executeQuery();
+            
+            while(rs.next()){
+                datos[0]= rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+            tabla.addRow(datos);
+            }
+        tablaventas.setModel(tabla);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,7 +64,7 @@ public class tablaventas extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaventas = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,7 +84,7 @@ public class tablaventas extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 80, 100));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaventas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -58,13 +92,13 @@ public class tablaventas extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaventas);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 700, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/reportes.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 520));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 890, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,6 +151,6 @@ public class tablaventas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaventas;
     // End of variables declaration//GEN-END:variables
 }
